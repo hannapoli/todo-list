@@ -1,0 +1,126 @@
+:root {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: rgb(23, 21, 21);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button,
+.input-btn {
+  cursor: pointer;
+}
+
+main {
+  padding-block: 2em;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-style: italic;
+}
+
+h2,
+h3 {
+  padding: 0.2em;
+  margin: 0.2em;
+}
+
+h1 {
+  padding: 0.3em;
+  margin-block: 0.4em;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  color: darkgreen;
+}
+
+p {
+  font-size: 1rem;
+}
+
+button {
+  background: darkgreen;
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: green;
+  box-shadow: 0 4px 12px darkgreen (30, 58, 95, 0.4);
+}
+
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fullContainer {
+  width: 100%;
+  background: darkgreen;
+  height: 4em;
+}
+
+.fullContainer a,
+.fullContainer p {
+  color: white;
+}
+
+.mainContainer {
+  flex-direction: column;
+  margin: 0 auto 5.2em auto;
+  max-width: 90%;
+}
+
+/* ===============================
+            992px
+=================================== */
+@media screen and (min-width:992px) {
+  .mainContainer {
+    max-width: 1200px;
+  }
+}
+
+/* 992px */
+
+/* ===============================
+            1200px
+=================================== */
+
+@media screen and (min-width:1200px) {
+  .mainContainer {
+    max-width: 1400px;
+  }
+}
+
+/* 1200px+ */
