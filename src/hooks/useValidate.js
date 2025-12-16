@@ -17,6 +17,7 @@ export const useValidate = () => {
     * @returns {string|null} palabra validada en minúsculas y sin espacios extra, o null si falló.
     */
     const validateTask = (tarea) => {
+        setErrorTask(null);
         let message = '';
         const regexp = /^[a-záéíóúÁÉÍÓÚüÜñÑ\s]+$/gi;
 
@@ -42,6 +43,7 @@ export const useValidate = () => {
     * @returns {string|null} descripción validada sin espacios extra, o null si falló.
     */
     const validateDescription = (descripcion) => {
+        setErrorDescription(null);
         let message = '';
         const cleanDescription = descripcion.trim();
         const minLength = 10;

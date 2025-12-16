@@ -32,10 +32,6 @@ button,
   cursor: pointer;
 }
 
-main {
-  padding-block: 2em;
-}
-
 img {
   width: 100%;
   display: block;
@@ -59,7 +55,7 @@ h1 {
   margin-block: 0.2em;
   font-size: 2.5rem;
   line-height: 1.1;
-  color: darkgreen;
+  color: black;
 }
 
 p {
@@ -68,8 +64,8 @@ p {
 
 button,
 .submitBtn {
-  background: darkgreen;
   border: none;
+  background-color: black;
   color: white;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -80,8 +76,8 @@ button,
 
 button:hover,
 .submitBtn:hover {
-  background: green;
-  box-shadow: 0 4px 12px darkgreen (30, 58, 95, 0.4);
+  background-color: rgb(31, 30, 30);
+  box-shadow: 0 4px 12px rgb(31, 30, 30) (30, 58, 95, 0.4);
 }
 
 .flexContainer {
@@ -95,7 +91,8 @@ button:hover,
 
 .fullContainer {
   width: 100%;
-  background: darkgreen;
+  background: #bdc3c7;
+  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
   height: 4em;
 }
 
@@ -108,8 +105,20 @@ button:hover,
   flex-direction: column;
   margin: 0 auto 5.2em auto;
   max-width: 90%;
+  padding-block: 2em;
 }
 
+/* ===============================
+            768px
+=================================== */
+
+@media screen and (min-width:768px) {
+  .mainContainer {
+    padding: 2em;
+  }
+}
+
+/* 768px */
 /* ===============================
             992px
 =================================== */
@@ -126,8 +135,15 @@ button:hover,
 =================================== */
 
 @media screen and (min-width:1200px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
   .mainContainer {
-    max-width: 1400px;
+    padding: 2em 4em;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 

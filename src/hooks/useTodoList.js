@@ -1,6 +1,6 @@
 import { useEffect, useReducer, useState } from "react"
-import { useTodoReducer } from "./useTodoReducer"
 import { useValidate } from "./useValidate";
+import { todoReducer } from "../reducers/todoReducer";
 
 const init = () => {
     const tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -10,8 +10,10 @@ const init = () => {
 
 //el hook para gestionar el useTodoReducer
 export const useTodoList = () => {
-    const [tasks, dispatch] = useReducer(useTodoReducer, [], init);
+    const [tasks, dispatch] = useReducer(todoReducer, [], init);
     const { validateTask, validateDescription, errorTask, errorDescription } = useValidate();
+    const [task, setTask] = useState('');
+    const [description, setDescription] = useState('');
 
     useEffect(() => {
         localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -19,11 +21,8 @@ export const useTodoList = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const task = e.target.tarea.value;
-        const description = e.target.description.value;
-        // console.log(task)
+        
         const taskValidated = validateTask(task);
-        // console.log(taskValidated)
         const descriptionValidated = validateDescription(description);
 
         if (!taskValidated || !descriptionValidated) {
@@ -40,8 +39,8 @@ export const useTodoList = () => {
 
         handleNewTask(newTodo);
 
-        e.target.tarea.value = '';
-        e.target.description.value = '';
+        setTask('');
+        setDescription('');
     }
 
     const handleNewTask = (newTodo) => {
@@ -75,6 +74,10 @@ export const useTodoList = () => {
         handleNewTask,
         handleToggleTask,
         errorTask,
-        errorDescription
+        errorDescription,
+        task,
+        setTask,
+        description,
+        setDescription
     }
 }
