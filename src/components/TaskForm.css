@@ -1,0 +1,24 @@
+form {
+    align-items: center;
+    justify-content: center;
+    margin-block: 1em;
+}
+
+.inputForm,
+.textareaForm {
+    width: 80%;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    padding: 0.7em;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.submitBtn {
+    width: 40%;
+}
+
+.inputError {
+    border-color: #dc3545;
+    background-color: #ffe6e6;
+}

@@ -1,0 +1,40 @@
+.taskName {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.taskBtns {
+    gap: 1em
+}
+
+.btnTarea {
+    width: 8em
+}
+
+.eliminar {
+    background-color: brown;
+}
+
+.eliminar:hover {
+    background-color: darkred;
+    box-shadow: 0 4px 12px darkred (30, 58, 95, 0.4);
+}
+
+.pendiente {
+    background-color: #FFEA00;
+    color: rgb(133, 61, 20);
+    
+}
+.pendiente:hover {
+    background-color: #FFD400;
+    box-shadow: 0 4px 12px #FFD400 (30, 58, 95, 0.4);
+
+}
+.finalizada {
+    background-color: #2E8B57
+}
+
+.finalizada:hover {
+    background-color: darkgreen
+    0 4px 12px darkgreen (30, 58, 95, 0.4);
+}

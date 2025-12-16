@@ -1,0 +1,13 @@
+.taskCard {
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.ocultoH2 {
+    display: none;
+}
+
+.visibleH2 {
+    display: block;
+}
