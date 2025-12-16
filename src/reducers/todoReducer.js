@@ -1,3 +1,12 @@
+/**
+ * Reducer para gestionar el estado de las tareas.
+ * Maneja las acciones de agregar, eliminar y cambiar el estado de completado de tareas.
+ * @param {Array} state - Estado actual del array de tareas.
+ * @param {Object} action - Objeto de acción con tipo y payload.
+ * @param {string} action.type - Tipo de acción a ejecutar: '[TODO] add task', '[TODO] delete task', '[TODO] toggle task'.
+ * @param {Object|number} action.payload - Datos de la acción (objeto de tarea para agregar, ID para eliminar/alternar).
+ * @returns {Array} Nuevo estado del array de tareas.
+ */
 export const todoReducer = (state = [], action) => {
     switch (action.type) {
         case '[TODO] add task':

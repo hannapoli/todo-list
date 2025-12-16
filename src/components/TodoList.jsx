@@ -3,6 +3,11 @@ import { TaskForm } from "./TaskForm"
 import { TaskList } from "./TaskList"
 import { useTodoList } from '../hooks/useTodoList';
 
+/**
+ * Componente principal que gestiona y muestra la lista de tareas.
+ * Integra el formulario para agregar tareas y la lista de tareas existentes.
+ * @returns {JSX.Element} Componente TodoList con formulario y lista de tareas.
+ */
 export const TodoList = () => {
 
     const { tasks, handleSubmit, handleDeleteTask, handleToggleTask, errorTask, errorDescription, task, setTask, description, setDescription } = useTodoList();
